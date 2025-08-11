@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌌 世界的構想師任務系統</title>
+<style>
+    body {
+        font-family: "Microsoft JhengHei", sans-serif;
+        margin: 0; padding: 0;
+        background: radial-gradient(circle at top left, #f0f4f8, #e4def7);
+        color: #333;
+    }
+    header {
+        background: linear-gradient(135deg, #89aefd, #c3a3f5);
+        color: white; padding: 1rem;
+        position: sticky; top: 0; z-index: 1000;
+        text-align: center;
+    }
+    header h1 {font-size: 1.4rem; margin: 0;}
+    nav {margin-top: 0.5rem;}
+    nav button {
+        background: rgba(255,255,255,0.25);
+        border: none; color: white;
+        padding: 0.5rem 0.8rem; margin: 0 0.2rem;
+        font-size: 0.9rem; border-radius: 6px;
+    }
+    nav button.active {
+        background: rgba(255,255,255,0.6);
+        color: #333;
+    }
+    main {padding: 1rem; max-width: 1000px; margin: auto;}
+    section {
+        background: rgba(255,255,255,0.9);
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    h2 {color: #553c9a; font-size: 1.2rem; margin-top: 0;}
+    ul {padding-left: 1.2rem;}
+    .hidden {display: none;}
+    .calendar {display:grid; grid-template-columns:repeat(7,1fr); gap:6px;}
+    .calendar div {
+        background: rgba(255,255,255,0.85);
+        border-radius: 8px; padding: 0.3rem;
+        font-size: 0.75rem; cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    blockquote {
+        border-left: 4px solid #ccc;
+        background: #fafafa;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        font-style: italic;
+    }
+    .nav-day {
+        text-align:center;
+        margin-bottom:1rem;
+    }
+    .nav-day button {
+        background:#eee;
+        border:none;
+        padding:0.3rem 0.6rem;
+        border-radius:4px;
+        cursor:pointer;
+    }
+    .role-btn {
+        background:#eee;
+        border:none;
+        padding:0.4rem 0.6rem;
+        margin:0.2rem;
+        border-radius:4px;
+        cursor:pointer;
+    }
+</style>
+</head>
+<body>
+
+<header>
+<h1>🌌 世界的構想師任務系統</h1>
+<nav>
+    <button id="btn1" data-page="1" class="active">總藍圖</button>
+    <button id="btn2" data-page="2">每日視圖</button>
+    <button id="btn3" data-page="3">月曆視圖</button>
+</nav>
+</header>
+
+<main>
+
+<!-- 總藍圖 -->
+<div id="page1">
+<section>
+<h2>〇. 超能力</h2>
+<p><strong>世界的構想師</strong> —— 「空想」是漂浮無力的，而「構想」是創造且有結構的。你能在腦中建立一個完整的世界——有神秘洞穴、天才筆記、特定氛圍的空間。挑戰在於，現實施工的繁瑣步驟與藍圖的宏大差距巨大。</p>
+<p><strong>錨點（Anchors）</strong> 是你的現實施工觸發器——它們是固定的物品或感官信號，幫助你在分心或被打斷後，迅速回到施工狀態。</p>
+</section>
+
+<section>
+<h2>Ⅰ. 三大角色（落地應用＋新錨點）</h2>
+<ul>
+<li><strong>世界萬花筒的掌管者（水晶）</strong> —— 你不是被動的觀察者，而是掌管者。你渴望理解世界的底層邏輯，同時被無窮的可能性與美麗所吸引。在精密秩序中展開旅程，容納未知與驚喜。<br><em>落地應用</em>：每天一段探索時光，觸碰水晶固定新知。</li>
+<li><strong>美的煉金術士（線香）</strong> —— 你對美有極高的感知與創造力，追求的是滋養靈魂的和諧感官體驗。從舒適的森林生活，到充滿水晶、香氣、貓與書的空間，再到色彩飽和的飾品創作，你的美是淡淡、舒服而能長久的。<br><em>落地應用</em>：挑選一角空間調整色彩或光線，點燃線香進入創作模式。</li>
+<li><strong>意識的守護者（佛珠）</strong> —— 你實踐情緒主權，力量來自清明與自主。智慧不是為了表象，而是守護心靈穩定與安寧。<br><em>落地應用</em>：每日檢視情緒，握佛珠呼吸，築起防護界線。</li>
+</ul>
+</section>
+
+<section>
+<h2>Ⅱ. 核心價值與行動原則</h2>
+<ul>
+<li>低啟動阻力行動（5 分鐘版本）</li>
+<li>系統優於意志力：用流程代替純靠毅力</li>
+<li>任務儀式化，賦予意義與角色感</li>
+<li>平衡美感要求與可持續性</li>
+</ul>
+</section>
+
+<section>
+<h2>Ⅲ. 啟動儀式：設計師的儀式</h2>
+<p><strong>錨點</strong>：選擇對應角色的物品（水晶、線香、佛珠）。</p>
+<p><strong>咒語</strong>：誦讀當日角色專屬咒語 3 次。</p>
+<p><strong>微動作</strong>：簡短啟動動作（推桌面物品、深呼吸、開播放清單）。</p>
+<p><strong>獎賞</strong>：完成後給予小回饋（飲料、伸展、喜愛音樂）。</p>
+</section>
+
+<section>
+<h2>Ⅳ. 行動模塊</h2>
+<ul>
+<li>飲食系統 —— 固定餐單循環減少決策疲勞</li>
+<li>整理系統 —— 每日一小區域依任務表循環清理</li>
+<li>學習／創作 —— 每天設定專注時光並用錨點開啟</li>
+<li>儀式 —— 固定開場與收尾儀式，強化切換</li>
+</ul>
+</section>
+
+<section>
+<h2>Ⅴ. 空間維護策略</h2>
+<ul>
+<li><strong>五大祭壇</strong> —— 選定五處關鍵空間（例：工作桌、餐桌、床頭櫃、玄關、聖壇），隨時保持整潔與美感。</li>
+<li><strong>物品三問法</strong> —— 問自己：1. 現在用得到嗎？ 2. 有情感或故事價值嗎？ 3. 今天重選會要嗎？ 若兩項以上「否」，考慮移除。</li>
+<li><strong>每週微巡禮</strong> —— 每週快速巡視空間，歸位錯物、補足缺失。</li>
+<li><strong>能量黑洞 5 分鐘清理</strong> —— 鎖定抗拒雜亂點，限時 5 分鐘改善。</li>
+</ul>
+</section>
+</div>
+
+<!-- 每日視圖 -->
+<div id="page2" class="hidden">
+<section>
+<div class="nav-day">
+    <button id="prevDayBtn">⬅ 前一天</button>
+    <span id="dayLabel" style="margin:0 1rem;font-weight:bold;"></span>
+    <button id="nextDayBtn">後一天 ➡</button>
+</div>
+<div id="dailyContent"></div>
+</section>
+</div>
+
+<!-- 月曆視圖 -->
+<div id="page3" class="hidden">
+<section>
+<h2>2025 年 8 月</h2>
+<div id="calendar" class="calendar"></div>
+</section>
+</div>
+
+</main>
+
+<script>
+// ====== 資料 ======
+const cycleData = [
+ {diet:"守護者之釜",food:"合掌瓜 1 個；新鮮粟米 1 條（連鬚）；胡蘿蔔 1 條；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"意識的守護者",anchor:"握住佛珠配合呼吸"},
+ {diet:"煉金術士之盅",food:"蕃茄 2 個（大）；胡蘿蔔 1 條；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"美的煉金術士",anchor:"點燃線香感受香氣"},
+ {diet:"驅濕之焰",food:"節瓜 2 條；蕃茄 2 個；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"世界萬花筒的掌管者",anchor:"觸碰水晶凝視 10 秒"},
+ {diet:"代謝之泉",food:"節瓜 2 條；新鮮粟米 1 條（連鬚）；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"意識的守護者",anchor:"握住佛珠配合呼吸"},
+ {diet:"和諧之息",food:"蕃茄 2 個（大）；新鮮粟米 半條（連鬚）；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"美的煉金術士",anchor:"點燃線香感受香氣"},
+ {diet:"淨化之鑄",food:"合掌瓜 2 個；蕃茄 2 個；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"世界萬花筒的掌管者",anchor:"觸碰水晶凝視 10 秒"},
+ {diet:"煉金之幕",food:"蕃茄 2 個（大）；胡蘿蔔 1 條；洋蔥 1 個（白/紫各半）；薑 5 片；芫荽 1 扎；黑胡椒粒 1 茶匙",theme:"美的煉金術士",anchor:"點燃線香感受香氣"}
+];
+
+const tidyTasks = [
+ ["8/11","廳已分類暫時歸位","清出通行通道"],
+ ["8/12","Idasen 頂部咖啡區","清理＋咖啡小物集中托盤"],
+ ["8/13","HOL 頂部清空","書 → Billy / 衣物 → 衣櫃 / 貓窩 → 貓區"],
+ ["8/14","Tullstorp 左櫃醫衛集中","其他移離"],
+ ["8/15","大房 Elvarli 頂層水晶區除塵","判斷不符藍圖物去留"],
+ ["8/16","細房 Elvarli A 頂層衣物整理","剔除不穿款"],
+ ["8/17","Malm 上層抽屜斷捨離","內搭衣物快速處理"],
+ ["8/18","Tullstorp 右櫃影音整理","整線、移除不用配件"],
+ ["8/19","廳桌面/茶几視覺清場","只留今日展示物"],
+ ["8/20","Idasen 中層左分類","高頻文具分類＋淘汰重複"],
+ ["8/21","細房 Elvarli B 中層整理","工藝材料歸位"],
+ ["8/22","HOL 內防災物檢視","移除過期物"],
+ ["8/23","大房 Elvarli 中層聖壇擺放","保持視覺能量清淨"],
+ ["8/24","細房 Malm 中層褲類整理","淘汰不合身"],
+ ["8/25","Idasen 下層抽屜整理","保健品、工具歸位＋處理過期品"],
+ ["8/26","全屋視覺走查","即時清理亂點 20 分鐘"]
+];
+
+const spells = {
+ "世界萬花筒的掌管者":"我，世界萬花筒之掌管者，所有阻礙，皆為基石。粉碎它，瓦解它，成為藍圖之路。",
+ "美的煉金術士":"我，美的煉金術士，以此煙，焚盡一切混沌；以此心，迎接至美和諧。",
+ "意識的守護者":"我，意識的守護者。心緒歸位，平息混沌。心是淨土，如如不動。"
+};
+
+const tipsList = [
+ "觀察細節，將一處障礙轉為新契機。","為生活添入一個讓你微笑的美好細節。","留意呼吸節奏，讓心緒歸位。",
+ "今天是重拾節奏的一天，哪怕一步。","把手邊一件小事做到極致。","嘗試用不同角度看今天的挑戰。",
+ "完成後給自己一點獎勵。","提前佈置好下一次的工作環境。","請相信每個小步都算數。",
+ "移除阻礙你專注的一樣東西。","記錄今天你最喜歡的瞬間。","留白，讓靈感有空間進來。",
+ "把一塊區域整理到看起來舒服。","換一首音樂，換一種心情。","賞自己五分鐘陽光或新鮮空氣。",
+ "對自己說：今天我做得很好。","把不必要的承諾減少一個。","今天比昨天更輕盈一些。",
+ "投入當下，暫時不想結果。","讓環境先變美，情緒自然跟上。","欣賞你已完成的，而非缺少的。"
+];
+
+// ====== 功能 ======
+const startDate = new Date("2025-08-11T00:00:00");
+let currentIndex = getTodayIndex();
+
+function getTodayIndex(){
+ const today = new Date();
+ const diff = Math.floor((today - startDate)/(1000*60*60*24));
+ return diff >= 0 && diff < tidyTasks.length ? diff : 0;
+}
+
+function renderDaily(index){
+ const [dateStr,taskName,taskDetail] = tidyTasks[index];
+ const cycle = cycleData[index % cycleData.length];
+ const tip = tipsList[index % tipsList.length];
+ document.getElementById("dayLabel").textContent = dateStr;
+ document.getElementById("dailyContent").innerHTML = `
+ <p><strong>🍲 今日湯餐</strong>：${cycle.diet}<br><em>${cycle.food}</em></p>
+ <p><strong>💎 今日整理任務</strong>：${taskName}<br><em>${taskDetail}</em></p>
+ <p><strong>🪞 今日咒語</strong>：</p>
+ <div>
+   <button class="role-btn" data-role="世界萬花筒的掌管者">世界萬花筒的掌管者</button>
+   <button class="role-btn" data-role="美的煉金術士">美的煉金術士</button>
+   <button class="role-btn" data-role="意識的守護者">意識的守護者</button>
+ </div>
+ <div id="spellArea" style="margin-top:0.5rem;"></div>
+ <p style="background:#fff8e5;padding:0.5rem;border-left:4px solid #f4c542;">
+ 🌱 今日提醒：${tip}
+ </p>`;
+
+ // 綁定按鈕事件
+ document.querySelectorAll(".role-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const role = btn.getAttribute("data-role");
+    const roleAnchor = cycleData.find(c=>c.theme===role)?.anchor || "";
+    document.getElementById("spellArea").innerHTML = `<blockquote>${spells[role]}</blockquote><p><em>錨點：</em>${roleAnchor}</p>`;
+  });
+ });
+}
+
+function prevDay(){ if(currentIndex>0){ currentIndex--; renderDaily(currentIndex);} }
+function nextDay(){ if(currentIndex<tidyTasks.length-1){ currentIndex++; renderDaily(currentIndex);} }
+
+function generateCalendar(year,month){
+ const cal=document.getElementById("calendar"); cal.innerHTML="";
+ const wd=["日","一","二","三","四","五","六"];
+ wd.forEach(w=>{let e=document.createElement("div");e.textContent=w; e.style.fontWeight="bold"; e.style.textAlign="center"; cal.appendChild(e);});
+ let firstDay=new Date(`${year}-${String(month+1).padStart(2,'0')}-01T00:00:00`).getDay();
+ let days=new Date(year,month+1,0).getDate();
+ for(let i=0;i<firstDay;i++){cal.appendChild(document.createElement("div"));}
+ for(let date=1;date<=days;date++){
+  let box=document.createElement("div");
+  let d=new Date(`${year}-${String(month+1).padStart(2,'0')}-${String(date).padStart(2,'0')}T00:00:00`);
+  let idx=Math.floor((d-startDate)/(1000*60*60*24));
+  if(idx>=0 && idx<tidyTasks.length){
+    let task=tidyTasks[idx];
+    let cyc=cycleData[idx % cycleData.length];
+    box.innerHTML=`<strong>${date}</strong><br>${cyc.diet}<br>${task[1]}`;
+    box.addEventListener("click",()=>{ currentIndex=idx; renderDaily(idx); showPage(2); });
+  } else {
+    box.textContent = date; box.style.opacity="0.4";
+  }
+  cal.appendChild(box);
+ }
+}
+
+function showPage(n){
+ for(let i=1;i<=3;i++){
+   document.getElementById("page"+i).classList.add("hidden");
+   document.getElementById("btn"+i).classList.remove("active");
+ }
+ document.getElementById("page"+n).classList.remove("hidden");
+ document.getElementById("btn"+n).classList.add("active");
+}
+
+// 導航
+document.getElementById("prevDayBtn").addEventListener("click",prevDay);
+document.getElementById("nextDayBtn").addEventListener("click",nextDay);
+document.querySelectorAll("nav button").forEach(btn=>{
+ btn.addEventListener("click",()=>showPage(parseInt(btn.dataset.page)));
+});
+
+// 初始化
+generateCalendar(2025,7);
+renderDaily(currentIndex);
+</script>
+
+</body>
+</html>
